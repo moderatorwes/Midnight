@@ -4,6 +4,9 @@ Midnight is a dark custom ZenDesk Theme.  This theme is very similar to the Humb
 
 See it Live Here:  http://moderatorwes.zendesk.com (for a limited time only)
 
+Like my theme then show your appreciation with a cup of coffee or two.
+<a href='http://ko-fi.com?i=8d141fc13e992fb' target='_blank'><img style='border:0px' src='http://ko-fi.com/img/button-4.png' border='0' alt='Buy Me A Coffee :) @ ko-fi.com' /></a>
+
 Updates
 ========
 * 05/01/14 - Coming Soon
