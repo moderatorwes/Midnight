@@ -51,12 +51,12 @@ You can change the color of the boxes all to the same color by using the colors 
 
 On the Home Page find the following line:  <a class="b-blue serv-block"  change the b-blue to one of the colors below.
 
-b-orange
-b-purple
-b-blue
-b-green
-b-black
-b-lblue
+* b-orange
+* b-purple
+* b-blue
+* b-green
+* b-black
+* b-lblue
 
 
 Changing the Background Image
