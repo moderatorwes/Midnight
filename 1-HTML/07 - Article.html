@@ -1,0 +1,59 @@
+<div class="pt">
+	<div class="container">
+		<nav class="sub-nav clearfix">
+			{{breadcrumbs}}
+		</nav>
+
+		<div class="clearfix">
+			<!--{{subscribe}} -->
+			<article class="main-column">
+				<header class="article-header clearfix">
+					<h1>{{visibility}} {{title}}</h1>
+				</header>
+
+				<div class="subtle-wrap">
+					<div class="article-body">
+						<span class="label label-warning"> Created on {{created_at}}</span>
+						<hr>
+						{{body}}
+					</div>
+					<hr>
+
+					<div class="article-attachments">
+						{{attachments}}
+					</div>
+
+					<footer class="article-footer clearfix">
+						{{vote}}
+					</footer>
+
+					<div class="article-more-questions">
+						{{more_questions}}
+					</div>
+				</div>
+
+				<section class="article-comments">
+					<h3><span class="badge badge-warning">{{comment_count}} {{comment_heading}} </span></h3>
+					<div class="subtle-wrap">
+						{{comment_list}}
+						<hr>
+						{{pending_comment_list}}
+						{{comment_pagination}}
+						{{comment_form}}
+
+					</div>
+				</section>
+
+			</article>
+
+			<div class="row">
+				<div class="col-md-6">
+					{{related_articles}}
+				</div>
+				<div class="col-md-6">
+					{{recent_articles}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
