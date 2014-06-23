@@ -1,4 +1,4 @@
-Midnight (Coming Soon)
+Midnight 
 =======================
 Midnight is a dark custom ZenDesk Theme.  This theme is very similar to the Humble Squid theme.  This theme is responsive and will work across many different monitor sizes including mobile phones.  You can use this theme or any code in this theme however you would like.  Enjoy!
 
@@ -29,7 +29,7 @@ How to Install
 Select the Humble Squid Theme as this was the site I used to start off with.  
 
 Assets
-* Open up the Assets folder and download these two files
+* Open up the Assets folder and download the files
 * Upload the files to the Assets area in ZenDesk
 
 CSS
@@ -43,6 +43,7 @@ JS
 HTML
 * Open up the HTML folder and click on one of the html files.
 * Copy and Paste the code into Zendesk
+* VERY IMPORTANT - Change the links in the Document Head to point to your Assets folder
 
 
 Changing Box Colors
@@ -63,3 +64,12 @@ Changing the Background Image
 ==============================
 Please make sure you change the path here to your Zendesk Asset path in the Midnight.css file Line Number 122  
 background: url(/hc/theme_assets/YOURPATH/39H.jpg) no-repeat center center fixed;
+
+Screenshots
+===========
+![Alt text](/Screenshots/Midnight-Home.png?raw=true "Home Page")
+![Alt text](/Screenshots/Midnight-Community.png?raw=true "Community Page")
+![Alt text](/Screenshots/Midnight-Contributions.png?raw=true "Contributions")
+
+
+
