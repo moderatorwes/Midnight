@@ -7,55 +7,53 @@
 			<div class="centered">
 				<div class="col-md-10 col-md-offset-1">
 					<h1>Welcome to our Support Center</h1>
-					{{search_bar_small}}
+					{{search submit=false class='search-small'}}
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- +++++ Category Boxes +++++ -->
-
-	<div class="container">
+  
+  <div class="container">
 		<div class="row">
 			<div class="col-lg-6">
-				<div class="row">
+				
+       {{#each categories}}
 					<div class="col-md-4 col-xs-12 col-sm-6">
-						<a class="b-orange serv-block" href="/hc/en-us/categories/200050968-Announcements"> <i class="fa fa-bullhorn"></i> <h3>Announcements</h3> </a>
+						<a class="b-lblue serv-block" href="{{url}}">
+               <i class="fa 
+                          {{#is name 'Announcements'}}fa-comments{{/is}}
+                          {{#is name 'Technical'}}fa-credit-card{{/is}}
+                          {{#is name 'Software'}}fa-user{{/is}}
+                          {{#is name 'FAQ'}}fa-desktop{{/is}}
+                          fa-3x"></i>
+              <h3>{{name}}</h3>
+               </a>
 					</div>
-					<div class="col-md-4 col-xs-12 col-sm-6">
-						<a class="b-blue serv-block" href="/hc/en-us/categories/200108526-Technical"> <i class="fa fa-fire-extinguisher"></i> <h3>Technical</h3> </a>
+  {{/each}}
+        <div class="col-md-4 col-xs-12 col-sm-6">
+						<a class="b-lblue serv-block" href="/hc/en-us/requests/new"> <i class="fa fa-fire-extinguisher"></i> <h3>Submit Ticket</h3> </a>
 					</div>
-					<div class="col-md-4 col-xs-12 col-sm-6">
-						<a class="b-green serv-block"> <i class="fa fa-gamepad"></i> <h3>Category</h3> </a>
-					</div>
-					<div class="col-md-4 col-xs-12 col-sm-6">
-						<a class="b-purple serv-block"> <i class="fa fa-globe"></i> <h3>Category</h3> </a>
-					</div>
-					<div class="col-md-4 col-xs-12 col-sm-6">
-						<a class="b-red serv-block" href="/hc/communities/public/topics"> <i class="fa fa-users"></i> <h3>Community</h3> </a>
-					</div>
-					<div class="col-md-4 col-xs-12 col-sm-6">
-						<a class="b-lblue serv-block"> <i class="fa fa-cog"></i> <h3>Category</h3> </a>
-					</div>
-					<div class="col-md-4 col-xs-12 col-sm-6">
-						<a class="b-green serv-block"> <i class="fa fa-download"></i> <h3>Category</h3> </a>
-					</div>
-					<div class="col-md-4 col-xs-12 col-sm-6">
-						<a class="b-blue serv-block"> <i class="fa fa-mobile"></i> <h3>Category</h3> </a>
-					</div>
-					<div class="col-md-4 col-xs-12 col-sm-6">
-						<a class="b-black serv-block"> <i class="fa fa-camera"></i> <h3>Category</h3> </a>
-					</div>
-				</div>
-			</div>
+				
+			</div> 
 			<div class="col-lg-6">
 				<div class="promoted-articles containerPR">
-					{{promoted_articles}}
-					{{trending_questions}}
+					{{#if promoted_articles}}
+					  <section class="promoted-articles">
+					    <h3>{{t 'promoted_articles'}}</h3>
+					    <ul>
+					      {{#each promoted_articles}}
+					        <li>
+					          <a href="{{url}}">{{title}}</a>
+					        </li>
+					      {{/each}}
+					    </ul>
+					  </section>
+					{{/if}}
+					{{trending_questions_list}}
 				</div>
 
 			</div>
 		</div>
 	</div>
-</div>
-
