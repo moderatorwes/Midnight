@@ -1,16 +1,30 @@
 <div id="ww">
 	<div class="container">
+
 		<div class="col-lg-6 col-lg-offset-3">
-			{{error_header}}
-			{{error_message}}
-			{{home_page_link}}
+			<h1>{{t 'oops'}}</h1>
+			{{#is error 'unauthorized'}}
+			  <h2>{{link 'sign_in'}}</h2>
+			{{/is}}
+
+			{{#is error 'forbidden'}}
+			  <h2>{{t 'not_authorized'}}</h2>
+			{{/is}}
+
+			{{#is error 'not_found'}}
+			  <h2>{{t 'nonexistent_page'}}</h2>
+			  <p>{{t 'mistyped_address_or_moved_page'}}</p>
+			{{/is}}
+			{{#link 'help_center'}}
+			  {{t 'back_to_homepage'}}
+			{{/link}}
 			<br>
 			<p>
 				Or
-			<br>
+				<br>
 				Feel free to search our entire Help Center
 			</p>
-			{{search_bar_small}}
+			{{search submit=false class='search-small'}}
 			<div id="ww"></div>
 		</div>
 	</div>
