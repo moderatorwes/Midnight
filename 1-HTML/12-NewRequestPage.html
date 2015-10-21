@@ -2,15 +2,30 @@
 	<div class="container">
 		{{breadcrumbs}}
 		<div class="row">
-			<h1>{{header}}{{follow_up_hint}}</h1>
-			{{error_list}}
+			<h1>{{t 'submit_a_request'}}{{#if parent}}
+			  <span class="follow-up-hint">
+			    {{follow_up}}
+			  </span>
+			{{/if}}</h1>
+			
 			<div class="col-lg-6 col-md-6">
 				<div class="form">
-					{{form}}
+					{{request_form}}
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6">
-				{{promoted_articles}}
+				{{#if promoted_articles}}
+				  <section class="promoted-articles">
+				    <h3>{{t 'promoted_articles'}}</h3>
+				    <ul>
+				      {{#each promoted_articles}}
+				        <li>
+				          <a href="{{url}}">{{title}}</a>
+				        </li>
+				      {{/each}}
+				    </ul>
+				  </section>
+				{{/if}}
 			</div>
 		</div>
 		<div class="alert alert-warning alert-dismissable">
@@ -23,4 +38,3 @@
 		</div>
 	</div>
 </div>
-
