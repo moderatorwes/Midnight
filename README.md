@@ -1,4 +1,4 @@
-Midnight 
+Midnight V2.0
 =======================
 Midnight is a dark custom ZenDesk Theme.  This theme is very similar to the Humble Squid theme.  This theme is responsive and will work across many different monitor sizes including mobile phones.  You can use this theme or any code in this theme however you would like.  Enjoy!
 
@@ -9,13 +9,14 @@ Like my theme then show your appreciation with a cup of coffee or two.
 
 Updates
 ========
-* 05/01/14 - Coming Soon
+* 10/21/15 - Updated to new Curlybars Framework
 * 05/28/14 - Initial Commit
 
 
 
 Features
 =========
+* NEW - Now with Dynamic Category boxes
 * Bootstrap Responsive FrameWork
 * Custom colored boxes (use all colors or choose the color you like best)
 * FontAwesome Icons
@@ -43,7 +44,7 @@ JS
 HTML
 * Open up the HTML folder and click on one of the html files.
 * Copy and Paste the code into Zendesk
-* VERY IMPORTANT - Change the links in the Document Head to point to your Assets folder
+
 
 
 Changing Box Colors
