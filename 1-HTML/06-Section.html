@@ -1,3 +1,4 @@
+
 <div id="ww">
 	<div class="container">
 
@@ -8,11 +9,36 @@
 		</div>
 
 		<section class="clearfix section-area">
-			<h1>{{visibility}} {{title}} {{subscribe}}</h1>
+			<h1>{{#if section.internal}}
+			  <span class="visibility-internal" data-title="{{t 'internal'}}">
+			    <span class="visibility-internal-icon"></span>
+			  </span>
+			{{/if}} {{section.name}} {{subscribe}}</h1>
 			<p class="section-description">
-				{{description}}
+				{{section.description}}
 			</p>
-			{{article_list}}
+
+			{{#if section.articles}}
+			  <ul class="article-list">
+			    {{#each section.articles}}
+			      <li {{#if promoted}} class="article-promoted" {{/if}}>
+			        {{#if promoted}}
+			          <span data-title="{{t 'promoted'}}">★</span>
+			        {{/if}}
+			        <a href="{{url}}">{{title}}</a>
+			      </li>
+			    {{/each}}
+			  </ul>
+			{{else}}
+			  <i class="section-empty">
+			    <a href="{{section.url}}">{{t 'empty'}}</a>
+			  </i>
+			{{/if}}
+
+			{{pagination}}
+
 		</section>
+
 	</div>
+
 </div>
