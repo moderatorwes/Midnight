@@ -1,4 +1,6 @@
+
 <div id="ww">
+
 	<div class="container inner">
 		<div class="row">
 			<div class="col-md-3 inner-right-md inner-bottom-sm">
@@ -31,10 +33,40 @@
 			<div class="col-md-9 inner-left-md border-left">
 				<div class="table-responsive">
 					<table class="table table-hover">
-						{{contribution_table}}
+						{{#if contributions}}
+						  <table>
+						    <thead>
+						      <tr>
+						        <th>{{t 'title'}}</th>
+						        <th>{{t 'type'}}</th>
+						        <th>{{t 'vote_sum'}}</th>
+						        <th>{{t 'last_activity'}}</th>
+						        <th>{{t 'created'}}</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      {{#each contributions}}
+						        <tr>
+						          <td>
+						            <a href="{{url}}">
+						              {{excerpt title characters=60}}
+						            </a>
+						          </td>
+						          <td>{{type}}</td>
+						          <td>{{vote_sum}}</td>
+						          <td>{{date last_activity_at}}</td>
+						          <td>{{date created_at}}</td>
+						        </tr>
+						      {{/each}}
+						    </tbody>
+						  </table>
+						{{else}}
+						  {{t 'no_contributions'}}
+						{{/if}}
+
+						{{pagination}}
 					</table>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
