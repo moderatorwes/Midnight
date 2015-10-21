@@ -2,7 +2,21 @@
  * jQuery v1.9.1 included
  */
 
+
+
 $(document).ready(function() {
+  
+  //Fix article icon
+ // $('a.article-vote-up.article-voted').hide();
+  
+  //Remove Sign Out
+  $("#user-menu").find('li:last-child').remove();
+  
+ // $('div.pt').tubular({videoId: 'dLFBY18gi1Q'});
+  
+  $('article-more-questions a:contains("Submit a request")').text('Submit a ticket');
+  
+  
 
 	//IE 10 Windows Phone fix
 	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -44,11 +58,11 @@ $(document).ready(function() {
 				for (var k = 3; k < articles.length; k++) {
 					$(articles[k]).hide();
 				}
-				var moreLink = $(categories[j]).parent().find('h3 a').attr('href'), linkText = 'More...';
+				var moreLink = $(categories[j]).parent().find('h3 a').attr('href'), linkText = '';
 				if (articles.length <= 6 && nativeMore.length == 0) {
 					linkText += "See all " + articles.length + " articles";
 				}
-				$("<a class='moreTopics' href=" + moreLink + ">" + linkText + "</a>").insertAfter($(categories[j]));
+				$("<a class='see-all-articles' href=" + moreLink + ">" + linkText + "</a>").insertAfter($(categories[j]));
 			}
 		}
 	}
@@ -80,5 +94,6 @@ $(document).ready(function() {
 	$(".comment-container textarea").one("focus", function() {
 		$(".comment-form-controls").show();
 	});
+	
 
 }); 
