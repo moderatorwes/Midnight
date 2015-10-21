@@ -33,7 +33,32 @@
 				<div class="table-responsive">
 					<div class="my-activities-table following-table">
 						<table class="table table-hover">
-							{{following_table}}
+							{{#if subscriptions}}
+							  <table>
+							    <thead>
+							      <tr>
+							        <th>{{t 'title'}}</th>
+							        <th>{{t 'type'}}</th>
+							        <th>{{t 'subscription'}}</th>
+							        <th></th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							      {{#each subscriptions}}
+							        <tr>
+							          <td><a href="{{url}}" title="{{title}}">{{excerpt title characters=60}}</a></td>
+							          <td>{{name}}</td>
+							          <td>{{subscribe}}</td>
+							          <td>{{unsubscribe}}</td>
+							        </tr>
+							      {{/each}}
+							    </tbody>
+							  </table>
+
+							  {{pagination}}
+							{{else}}
+							  <p>{{t 'not_following'}}</p>
+							{{/if}}
 						</table>
 					</div>
 				</div>
